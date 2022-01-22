@@ -1,6 +1,6 @@
 package nl.hva.timetrackingdashboard.models
 
 data class Timeframe (
-    val current: Int,
-    val previous: Int
+    val current: Int? = null,
+    val previous: Int? = null
 )

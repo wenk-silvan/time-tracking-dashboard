@@ -19,7 +19,9 @@ class SectionsAdapter(private val sections: List<Section>) :
         private val binding = ItemSectionBinding.bind(itemView)
 
         fun databind(section: Section) {
-            binding.text.text = section.title
+            binding.tvTitle.text = section.title
+            binding.tvHours.text = "${section.timeframes?.weekly?.current}hrs"
+            binding.tvTimeframe.text = "Last Week - ${section.timeframes?.weekly?.previous}hrs"
         }
     }
 

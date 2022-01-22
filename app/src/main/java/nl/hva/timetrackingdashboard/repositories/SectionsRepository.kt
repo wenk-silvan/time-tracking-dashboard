@@ -15,8 +15,11 @@ class SectionsRepository(private val context: Context) {
     private val _sections: MutableLiveData<List<Section>> = MutableLiveData()
     val sections: LiveData<List<Section>> get() = _sections
 
+    /**
+     * Read the json file, deserializes data to List<Section> and updates LiveData
+     */
     fun getSections() {
-        val jsonFileString = getJsonDataFromAsset(JSON_FILE)
+        val jsonFileString = getJsonDataFromAsset()
         Log.i("data", jsonFileString!!)
 
         val gson = Gson()
@@ -24,15 +27,16 @@ class SectionsRepository(private val context: Context) {
 
         var tempSections: List<Section> = gson.fromJson(jsonFileString, listSectionType)
         tempSections.forEachIndexed { idx, section -> Log.i("data", "> Item $idx:\n$section") }
+
         _sections.value = tempSections
     }
 
-    private fun getJsonDataFromAsset(fileName: String): String? {
+    private fun getJsonDataFromAsset(): String? {
         val jsonString: String
         try {
             jsonString = context
                 .assets
-                .open(fileName)
+                .open(JSON_FILE)
                 .bufferedReader()
                 .use { it.readText() }
         } catch (e: IOException) {

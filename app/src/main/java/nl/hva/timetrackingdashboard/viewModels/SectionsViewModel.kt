@@ -18,6 +18,9 @@ class SectionsViewModel(application: Application) : AndroidViewModel(application
     private val _errorText: MutableLiveData<String> = MutableLiveData()
     val errorText: LiveData<String> get() = _errorText
 
+    /**
+     * Gets List<Section> from the repository and updates LiveData
+     */
     fun getSections() {
         viewModelScope.launch {
             try {
