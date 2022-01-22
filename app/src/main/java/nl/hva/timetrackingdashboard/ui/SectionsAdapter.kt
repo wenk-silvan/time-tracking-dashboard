@@ -13,6 +13,15 @@ class SectionsAdapter(private val sections: List<Section>) :
     RecyclerView.Adapter<SectionsAdapter.ViewHolder>() {
 
     private lateinit var context: Context
+    private var colorCounter: Int = 0
+    private val colors: ArrayList<Int> = arrayListOf(
+        R.color.orange,
+        R.color.lightblue,
+        R.color.pink,
+        R.color.green,
+        R.color.purple,
+        R.color.yellow
+    )
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -22,6 +31,9 @@ class SectionsAdapter(private val sections: List<Section>) :
             binding.tvTitle.text = section.title
             binding.tvHours.text = "${section.timeframes?.weekly?.current}hrs"
             binding.tvTimeframe.text = "Last Week - ${section.timeframes?.weekly?.previous}hrs"
+
+            binding.mcvSection.setCardBackgroundColor(context.getColor(colors[colorCounter]))
+            colorCounter = if (colorCounter >= colors.size - 1) 0 else colorCounter + 1
         }
     }
 

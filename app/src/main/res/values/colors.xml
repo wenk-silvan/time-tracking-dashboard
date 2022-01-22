@@ -13,8 +13,8 @@
     <color name="font">#edf1fe</color>
     <color name="orange">#fe8b64</color>
     <color name="green">#4bcf83</color>
-<!--    <color name="lightblue">#0d1323</color>-->
-<!--    <color name="violet">#0d1323</color>-->
-<!--    <color name="pink">#0d1323</color>-->
-<!--    <color name="yellow">#0d1323</color>-->
+    <color name="lightblue">#56c2e6</color>
+    <color name="purple">#7235d1</color>
+    <color name="pink">#ff5e7d</color>
+    <color name="yellow">#f1c75b</color>
 </resources>
