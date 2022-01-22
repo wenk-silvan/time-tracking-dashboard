@@ -4,10 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Development/hslu/hs21/mobdev/TimeTrackingDashboard/app/src/main/res/layout/activity_main.xml" value="0.36354166666666665" />
+        <entry key="..\:/Development/kotlin/TimeTrackingDashboard/app/src/main/res/drawable-v24/icon_ellipsis.xml" value="0.21875" />
+        <entry key="..\:/Development/kotlin/TimeTrackingDashboard/app/src/main/res/drawable-v24/vd_vector.xml" value="0.21875" />
         <entry key="..\:/Development/kotlin/TimeTrackingDashboard/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Development/kotlin/TimeTrackingDashboard/app/src/main/res/layout/content_main.xml" value="0.20260416666666667" />
         <entry key="..\:/Development/kotlin/TimeTrackingDashboard/app/src/main/res/layout/fragment_dashboard.xml" value="0.20260416666666667" />
-        <entry key="..\:/Development/kotlin/TimeTrackingDashboard/app/src/main/res/layout/item_section.xml" value="0.20260416666666667" />
+        <entry key="..\:/Development/kotlin/TimeTrackingDashboard/app/src/main/res/layout/item_section.xml" value="0.25" />
       </map>
     </option>
   </component>

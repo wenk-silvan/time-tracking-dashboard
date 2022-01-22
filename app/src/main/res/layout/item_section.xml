@@ -1,85 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mcvSection"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardElevation="8dp"
-    app:cardCornerRadius="8dp">
+    android:backgroundTint="@color/black"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
 
-    <TextView
-        android:id="@+id/text"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Test\nTest" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp">
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical">-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingVertical="24dp"
+            android:paddingHorizontal="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-<!--        &lt;!&ndash; Media &ndash;&gt;-->
-<!--        <ImageView-->
-<!--            app:srcCompat="@drawable/media"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="194dp"-->
-<!--            android:contentDescription="@string/content_description_media"-->
-<!--            android:scaleType="centerCrop" />-->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Work" />
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="vertical"-->
-<!--            android:padding="16dp">-->
+            <TextView
+                android:id="@+id/tvHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                tools:text="32hrs" />
 
-<!--            &lt;!&ndash; Title, secondary and supporting text &ndash;&gt;-->
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/title"-->
-<!--                android:textAppearance="?attr/textAppearanceHeadline6" />-->
+            <ImageView
+                android:id="@+id/ivEllipsis"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_ellipsis"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Work" />
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="8dp"-->
-<!--                android:text="@string/secondary_text"-->
-<!--                android:textAppearance="?attr/textAppearanceBody2"-->
-<!--                android:textColor="?android:attr/textColorSecondary" />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="16dp"-->
-<!--                android:text="@string/supporting_text"-->
-<!--                android:textAppearance="?attr/textAppearanceBody2"-->
-<!--                android:textColor="?android:attr/textColorSecondary" />-->
-
-<!--        </LinearLayout>-->
-
-<!--        &lt;!&ndash; Buttons &ndash;&gt;-->
-<!--        <LinearLayout-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_margin="8dp"-->
-<!--            android:orientation="horizontal">-->
-
-<!--            <com.google.android.material.button.MaterialButton-->
-<!--                style="?attr/borderlessButtonStyle"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginEnd="8dp"-->
-<!--                android:text="@string/action_1" />-->
-
-<!--            <com.google.android.material.button.MaterialButton-->
-<!--                style="?attr/borderlessButtonStyle"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/action_2" />-->
-<!--        </LinearLayout>-->
-
-<!--    </LinearLayout>-->
-
+            <TextView
+                android:id="@+id/tvTimeframe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ivEllipsis"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Last Week - 36hrs" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 </com.google.android.material.card.MaterialCardView>
